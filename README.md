@@ -1,1 +1,2 @@
-Creating my first chat app
+Creating my first chat app using react on the front end and firebase for the backend. Also used the Google Oauth
+authentication for users to sign in with their own G-mail account, tailwind CSS for all my styling.
