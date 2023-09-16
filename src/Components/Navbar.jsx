@@ -9,7 +9,7 @@ const style = {
 const Navbar = () => {
   return (
     <div className={style.navbar}>
-      <h1 className={style.heading}>Mingle App</h1>
+      <h1 className={style.heading}>Mingle's App</h1>
     </div>
   )
 }
