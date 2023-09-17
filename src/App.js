@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Components/Navbar";
 import { auth } from "./Firebase";
 import {useAuthState} from 'react-firebase-hooks/auth';
+import Chat from "./Components/Chat";
 
 
 const styles = {
@@ -21,6 +22,7 @@ const [user] = useAuthState(auth)
       {/*Navbar component*/}
       <Navbar />
       {/*chat component*/}
+      <Chat />
     </section>
     </div>
   );
