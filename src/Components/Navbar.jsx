@@ -2,7 +2,7 @@ import React from 'react';
 import { auth } from '../Firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import SignIn from './SignIn';
-import SignOut from './SignOut';
+import SignOut from './LogOut';
 
 
 const style = {
@@ -18,8 +18,10 @@ console.log(user)
   return (
     <div className={style.navbar}>
       <h1 className={style.heading}>Mingle's App</h1>
-      <SignIn />
-      <SignOut />
+      
+      {user ? <SignOut /> : <SignIn />}
+      
+      
     </div>
   )
 }
