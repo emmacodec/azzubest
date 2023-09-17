@@ -1,4 +1,8 @@
 import React from 'react';
+import { auth } from '../Firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import SignIn from './SignIn';
+import SignOut from './SignOut';
 
 
 const style = {
@@ -7,9 +11,15 @@ const style = {
 }
 
 const Navbar = () => {
+
+const [user] = useAuthState(auth)
+console.log(user)
+
   return (
     <div className={style.navbar}>
       <h1 className={style.heading}>Mingle's App</h1>
+      <SignIn />
+      <SignOut />
     </div>
   )
 }
