@@ -8,12 +8,12 @@ const Style = {
     receive: `bg-[#FFBCD9] text-black float-left rounded-br-full`,
 };
 
-const Message = ({chats}) => {
+const Message = ({messages}) => {
   return (
     <div>
       <div className={Style.message}>
         <p className={Style.p}>Emmanuel</p>
-        <p>I'm a Front-End Web Developer</p>
+        <p>{messages.text}</p>
       </div>
     </div>
   )
