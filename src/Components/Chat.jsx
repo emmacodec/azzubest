@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react'
 import Message from './Message'
 import { collection, doc, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { db } from '../Firebase';
+import Sentmessage from './Sentmessage';
 
 
 const Style = {
@@ -40,6 +41,7 @@ useEffect(() =>{
     </main>
 
     {/*send message*/}
+    <Sentmessage scroll={scroll} />
     <span ref={scroll}></span>
     </>
   )

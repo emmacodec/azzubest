@@ -21,8 +21,11 @@ const [user] = useAuthState(auth)
 
       {/*Navbar component*/}
       <Navbar />
-      {/*chat component*/}
-      <Chat />
+
+      
+      {user ?  <Chat /> : null}
+      
+ 
     </section>
     </div>
   );

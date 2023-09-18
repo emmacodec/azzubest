@@ -1,4 +1,5 @@
 import React from 'react'
+import { auth } from '../Firebase';
 
 
 const Style = {
@@ -9,10 +10,16 @@ const Style = {
 };
 
 const Message = ({messages}) => {
+
+const textClass =
+messages.uid === auth.currentUser.uid
+? `${Style.sent}`
+: `${Style.receive}`
+
   return (
     <div>
-      <div className={Style.message}>
-        <p className={Style.p}>Emmanuel</p>
+      <div className={`${Style.message} ${textClass}`}>
+        <p className={Style.p}>{messages.name}</p>
         <p>{messages.text}</p>
       </div>
     </div>
